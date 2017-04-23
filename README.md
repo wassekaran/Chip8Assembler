@@ -120,6 +120,17 @@ The assembler supports the following Mnemonics:
 | `STOR`   | `Fs55` | 1 | Store the values of register `s` registers at index            |
 | `READ`   | `Fs65` | 1 | Read back the stored values at index into registers            |
 
+Additionally, the assembler supports the follow super chip 8 Mnemonics:
+
+| Mnemonic | Opcode | Operands | Description |
+| -------- | ------ | :------: | ----------- |
+| `SCRD`   | `00Cn` | 1 | Scroll down `n` lines                                          |
+| `SCRR`   | `00FB` | 0 | Scroll right 4 pixels                                          |
+| `SCRL`   | `00FC` | 0 | Scroll left 4 pixels                                           |
+| `EXIT`   | `00FD` | 0 | Exit interpreter                                               |
+| `EXTD`   | `00FE` | 0 | Disable extended mode                                          |
+| `EXTE`   | `00FF` | 0 | Enable extended mode                                           |
+
 There are two additional pseudo operations that are supported:
 
 | Mnemonic | Description |
